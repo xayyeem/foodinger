@@ -1,0 +1,98 @@
+# Props
+
+- props is a short form of Properties so these are the properties which you can pass to these component(js function)
+- passing data dynamically we can use props
+- Props are just normal arguments to the fuction
+- when i say i am passing props to a component that means i am passing argument to a jascript function as simple as that
+- example use in vid 4 making restaurant card 
+
+
+
+
+
+````
+const RestaurantCard = (props) => {
+  return (
+    <div>
+      <div className="res-card">
+        <img
+          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/jtuqk0cb3lfjldfav46t"
+          alt=""
+        />
+        <h1>{props.Rname}</h1>
+        <h5>{props.time}</h5>
+        <h5>{props.cusine}</h5>
+        <h3>{props.price}</h3>
+        <button className="btn1 btn">Order Now</button>
+      </div>
+    </div>
+  );
+};
+
+function Body() {
+  return (
+    <>
+      <div className="body">
+        <div className="search-container">
+          <h1>Order Your Favourite Food</h1>
+          <div className="search">
+            <input
+              type="text"
+              placeholder="Enter Your favourite Resaurant Name"
+            />
+            <button className="btn">Search</button>
+          </div>
+        </div>
+      </div>
+   
+
+        <div className="res-container">
+          <RestaurantCard Rname="Megna Foods" time="4.1 30-34 mins" cusine="Cakes and Pastry" price="235$" />
+          <RestaurantCard Rname="KFC" time="4.4 30-34 mins" cusine="Cakes and Pastry" price="235$" />
+          <RestaurantCard Rname="Al-Baik" time="4.1 30-34 mins" cusine="Cakes and Pastry" price="235$" />
+          <RestaurantCard Rname="Kallu Kabab" time="4.1 30-34 mins" cusine="Cakes and Pastry" price="235$" />
+        </div>
+    </>
+  );
+}
+
+export default Body;
+````
+> and these restaurant data will not be written mannualy it will come by in format of json with the help of backeend
+
+- props is an object and React will wrap all the things like Rname, Cusine... and pass to the components
+- Object can be access by . Similarly props can be access by . ex {Props.Rname },{Props.cusine} ...  
+
+
+# some react developer do "DESTRUCTURING ON THE FLY"
+
+- means:
+```
+const RestaurantCard = ({Rname , cuisine , ..}) => {..
+//instead of {props.Rname}
+they write :  {Rname}
+<h3>{cusine}</h3>
+.}
+    
+```
+
+but what does this means????
+- There is a concept in JavaSCript Destrucuring of object that what really happening behind the scene
+```
+    const RestaurantCard = (props)=>{
+        const {Rname ,cusine} = props;
+    }
+```
+
+
+
+# Config Driven UI
+
+- Swiggy use
+- It is know as config driven UI
+- diifeerent UI will be shown according to location for example in christman US will get large discound and diffentr carousel whereas it will not be seen in Saudi Arabia
+- will you build a differnt website for US and Saudi. Answerr is No.
+- Our website will be be frmed by data
+
+- Config Driven UI : UI is driven(maked)  by data or confi, and how this config comes from Backend.
+

@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Geologica", sans-serif;
+  overflow-x: hidden;
+}
+  h1,h2,h3,h4,h5,h6{
+    font-family: "Geologica", sans-serif;
+    overflow-y: hidden;
+  } 
+body {
+  /* dont know why it is not  working for  */
+  background-image: url("https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1200,h_630,d_uk:cuisines:argentinian-1.jpg/v1/uk/restaurants/164421.jpg");
+  background-repeat: repeat;
+}

@@ -1,0 +1,11 @@
+.error{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error-h{
+    font-size: 32px;
+    font-weight: bolder;
+    color: red;
+}
